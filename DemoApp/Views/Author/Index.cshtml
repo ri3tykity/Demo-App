@@ -4,49 +4,55 @@
     ViewBag.Title = "Author";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
-    <p>
-        @Html.ActionLink("Create New", "New")
-    </p>
-    <table class="table table-bordered table-hover">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateOfBirth)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Books)
-            </th>
-            <th></th>
-        </tr>
+    <br />
+    <div class="row justify-content-md-center">
+        <div class="col-10">
+            <p>
+                @Html.ActionLink("Create New", "New", "Author", null, new { @class = "btn btn-primary btn-sm" })
+            </p>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateOfBirth)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Books)
+                    </th>
+                    <th></th>
+                </tr>
 
-        @foreach (var item in Model)
-        {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateOfBirth)
-        </td>
-        <td>
-            @{
-                var books = string.Join(", ", item.Books.Select(a => a.Title).ToList());
-            }
-            @books
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-    </tr>
-        }
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateOfBirth)
+                        </td>
+                        <td>
+                            @{
+                                var books = string.Join(", ", item.Books.Select(a => a.Title).ToList());
+                            }
+                            @books
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+                }
 
-    </table>
+            </table>
+        </div>
+    </div>
+        
