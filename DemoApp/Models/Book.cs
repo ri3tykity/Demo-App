@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace DemoApp.Models
 {
@@ -11,6 +12,7 @@ namespace DemoApp.Models
         [Key]
         public int Id { get; set; }
         public string Title { get; set; }
-        public List<Author> Authors { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Author> Authors { get; set; }
     }
 }

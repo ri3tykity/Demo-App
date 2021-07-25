@@ -136,19 +136,16 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\AuthorsController.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107250643297_InitialModel.cs" />
-    <Compile Include="Migrations\202107250643297_InitialModel.designer.cs">
-      <DependentUpon>202107250643297_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107251149045_updatedModel.cs" />
-    <Compile Include="Migrations\202107251149045_updatedModel.designer.cs">
-      <DependentUpon>202107251149045_updatedModel.cs</DependentUpon>
+    <Compile Include="Migrations\202107251552233_Initial.cs" />
+    <Compile Include="Migrations\202107251552233_Initial.designer.cs">
+      <DependentUpon>202107251552233_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
@@ -202,11 +199,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107250643297_InitialModel.resx">
-      <DependentUpon>202107250643297_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107251149045_updatedModel.resx">
-      <DependentUpon>202107251149045_updatedModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107251552233_Initial.resx">
+      <DependentUpon>202107251552233_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

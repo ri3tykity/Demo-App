@@ -21,6 +21,6 @@ namespace DemoApp.Models
         [DisplayName("Date Of Birth")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
         public DateTime DateOfBirth { get; set; }
-        public List<Book> Books { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
     }
 }
